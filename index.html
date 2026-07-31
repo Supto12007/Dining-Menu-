@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Secret Message</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#111;
+    font-family:Arial, sans-serif;
+    color:white;
+}
+
+#box{
+    width:180px;
+    height:180px;
+    background:#d4a017;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+    transition:0.5s;
+    box-shadow:0 0 20px gold;
+}
+
+#box:hover{
+    transform:scale(1.05);
+}
+
+#message{
+    display:none;
+    max-width:600px;
+    text-align:center;
+    padding:20px;
+    animation:fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="box" onclick="openBox()">
+🎁<br>Click to Open
+</div>
+
+<div id="message">
+<h1>🎉 Surprise!</h1>
+
+<p>
+Write your message here.
+</p>
+
+</div>
+
+<script>
+function openBox(){
+    document.getElementById("box").style.display="none";
+    document.getElementById("message").style.display="block";
+}
+</script>
+
+</body>
+</html>
